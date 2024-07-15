@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Spesifikasi Pompa Air</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Perhitungan Spesifikasi Pompa Air</h1>
+        <form id="pumpForm">
+            <label for="employees">Jumlah Karyawan:</label>
+            <input type="number" id="employees" required>
+
+            <label for="floors">Jumlah Lantai:</label>
+            <input type="number" id="floors" required>
+
+            <label for="waterPerPerson">Kebutuhan Air per Orang per Hari (liter):</label>
+            <input type="number" id="waterPerPerson" value="50" required>
+
+            <label for="flowPerFloor">Kebutuhan Aliran Air per Lantai (LPM):</label>
+            <input type="number" id="flowPerFloor" value="20" required>
+
+            <label for="efficiency">Efisiensi Pompa:</label>
+            <input type="number" step="0.01" id="efficiency" value="0.8" required>
+
+            <button type="button" onclick="calculate()">Hitung</button>
+        </form>
+
+        <div id="results">
+            <h2>Hasil Perhitungan</h2>
+            <p>Total Kebutuhan Air per Hari: <span id="totalWater"></span> liter</p>
+            <p>Total Aliran (LPM): <span id="totalFlow"></span></p>
+            <p>Daya Pompa (kW): <span id="pumpPower"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
